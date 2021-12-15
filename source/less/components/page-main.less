@@ -1,0 +1,28 @@
+.page-main {
+  flex-grow: 1;
+}
+
+.page-main__container {
+  .container;
+}
+
+.page-main__title {
+  position: relative;
+  margin: 0;
+  margin-bottom: 60px;
+  padding-top: 27px;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+  color: @dark-font-color;
+
+  &::after {
+    position: absolute;
+    bottom: -41px;
+    left: -20px;
+    right: -20px;
+    height: 1px;
+    background-color: #d9d9d9;
+    content: "";
+  }
+}

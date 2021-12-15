@@ -1,0 +1,54 @@
+.catalog-promo__container {
+  position: relative;
+  .flex (@align-items: flex-end;);
+  .container;
+  min-height: 290px;
+  margin-bottom: 35px;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/cat-in-backpack.png");
+    .background-image-style;
+    content: "";
+  }
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: @bg-accent-transparent;
+    content: "";
+  }
+}
+
+.catalog-promo__description {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  padding: 42px;
+  font-family: @font-arial;
+  font-size: 16px;
+  line-height: 20px;
+  color: @light-font-color;
+  text-align: center;
+
+  &::before {
+    position: absolute;
+    top: -87px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 78px;
+    height: 80px;
+    background-image: url("../img/present.svg");
+    .background-image-style;
+    content: "";
+  }
+}
