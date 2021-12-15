@@ -1,8 +1,8 @@
-.programmes-container {
+.programmes__container {
   .container;
 }
 
-.programmes-list {
+.programmes__list {
   .reset-list;
   margin-bottom: 19px;
 }
@@ -41,14 +41,14 @@
 
 .programmes__title--slim {
   &::before {
-    background-image: url("../../img/programmes-slim.svg"), radial-gradient(circle at center, @bg-accent 25px, transparent 25px);
+    background-image: url("../img/programmes-slim.svg"), radial-gradient(circle at center, @bg-accent 25px, transparent 25px);
     .background-image-style (@background-position: top 44% center);
   }
 }
 
 .programmes__title--pro {
   &::before {
-    background-image: url("../../img/programmes-pro.svg"), radial-gradient(circle at center, @bg-accent 25px, transparent 25px);
+    background-image: url("../img/programmes-pro.svg"), radial-gradient(circle at center, @bg-accent 25px, transparent 25px);
     .background-image-style;
   }
 }
@@ -82,7 +82,7 @@
   padding-bottom: 23px;
   font-size: 16px;
   line-height: 16px;
-  background-image: url("../../img/programmes-arrow.svg");
+  background-image: url("../img/programmes-arrow.svg");
   .background-image-style(@background-position: top 47% right);
   text-transform: uppercase;
 }
