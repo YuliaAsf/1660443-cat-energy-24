@@ -1,0 +1,23 @@
+html {
+  height: 100%;
+  background-color: darken(@bg-neutral, 50%);/*поставила пока фиксированную ширину body и фон для html, чтобы на больших экранах нормально смотрелось. Потом уберу.*/
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  min-height: 100%;
+  margin: 0 auto;
+  font-family: @font-oswald;
+  font-weight: 400;
+  color: @base-font-color;
+  background-color: @bg-light;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}

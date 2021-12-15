@@ -1,0 +1,39 @@
+.reset-list (@margin: 0; @padding:0;) {
+  margin: @margin;
+  padding: @padding;
+  list-style-type: none;
+}
+
+.container (@width:280px) {
+  width: @width;
+  margin: 0 auto;
+}
+
+.button-style (@background-color: transparent) {
+  padding: 0;
+  border: none;
+  background-color: @background-color;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.background-image-style (@background-position: center center;) {
+  background-repeat: no-repeat;
+  background-position: @background-position;
+}
+
+.flex (@justify-content: space-between; @align-items: center;) {
+  display: flex;
+  justify-content: @justify-content;
+  align-items: @align-items;
+}
+
+.link-style (@color: inherit;) {
+  color: @color;
+  text-decoration: none;
+}
+
+.oswald-medium {
+  font-family: @font-oswald;
+  font-weight: 500;
+}
