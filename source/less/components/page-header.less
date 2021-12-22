@@ -1,6 +1,11 @@
 .page-header {
+  position: relative;
   color: @dark-font-color;
   background-color: @bg-light;
+
+  @media (min-width: @desktop-width) {
+    background-color: transparent;
+  }
 }
 
 .page-header--form {
@@ -10,20 +15,66 @@
 .page-header__container {
   .container;
   .flex;
+  flex-wrap: wrap;
   padding-top: 11px;
-  padding-bottom: 15px;
+  padding-bottom: 16px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 19px;
+    margin-bottom: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 45px;
+  }
 }
 
 .page-header__container--form {
-  padding-top: 12px;
+  padding-top: 13px;
   padding-bottom: 14px;
 }
 
 .page-header__logo {
   .flex;
-  width: 191px;
 }
 
-.page-header__logo-text {
+.page-header__logo--image {
+  width: 40px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.page-header__logo--text {
+  width: 116px;
   padding-top: 4px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.page-header__logo--tablet {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    width: 200px;
+    height: 62px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.page-header__logo--desktop {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    width: 202px;
+    height: 59px;
+  }
 }

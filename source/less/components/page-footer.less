@@ -1,11 +1,26 @@
-.page-footer {
-  padding-top: 27px;
+.page-footer__contacts {
+  position: relative;
+  padding-top: 26px;
+
+  @media (min-width: @desktop-width) {
+    padding-top: 0;
+  }
 }
 
 .page-footer--colored {
   background-color: @bg-neutral;
 }
 
+.page-footer__map {
+  @media (min-width: @tablet-width) {
+    height: 400px;
+  }
+}
+
 .page-footer__copyright {
   border-top: 1px solid #d9d9d9;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
 }
