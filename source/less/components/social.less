@@ -4,6 +4,15 @@
 
 .social__container {
   .container;
+
+  @media (min-width: @tablet-width) {
+    .flex;
+    padding: 32px 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 42px 110px;
+  }
 }
 
 .social__link-logo {
@@ -11,6 +20,11 @@
   padding: 34px;
   padding-bottom: 27px;
   border-bottom: 1px solid #d9d9d9;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    border: none;
+  }
 }
 
 .social__logo {
@@ -22,11 +36,20 @@
 .social__list {
   .flex ;
   flex-wrap: wrap;
-  width: 152px;
-  .reset-list (@padding: 11px 0; @margin: 0 auto;);
+  width: 153px;
+  .reset-list (@padding: 12px 0; @margin: 0 auto;);
   padding-bottom: 7px;
   padding-right: 2px;
   font-size: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 146px;
+    padding: 0 0 4px 26px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 7px;
+  }
 }
 
 .social__item {
@@ -46,4 +69,25 @@
   width: 25px;
   height: 25px;
   padding: 10px;
+}
+
+.social__icon--vk {
+  @media (min-width: @tablet-width) {
+    min-width: 29px;
+    height: 28px;
+  }
+}
+
+.social__icon--instagram {
+  @media (min-width: @tablet-width) {
+    min-width: 23px;
+    height: 23px;
+  }
+}
+
+.social__icon--fb {
+  @media (min-width: @tablet-width) {
+    min-width: 20px;
+    height: 28px;
+  }
 }

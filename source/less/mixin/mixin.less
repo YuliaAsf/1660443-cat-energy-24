@@ -4,13 +4,21 @@
   list-style-type: none;
 }
 
-.container (@width:280px) {
+.container (@width: auto) {
+  box-sizing: border-box;
   width: @width;
-  margin: 0 auto;
+  padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 110px;
+  }
 }
 
 .button-style (@background-color: transparent) {
-  padding: 0;
   border: none;
   background-color: @background-color;
   font-family: inherit;

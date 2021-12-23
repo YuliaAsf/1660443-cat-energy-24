@@ -4,13 +4,19 @@
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
     <link href="css/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width initial-scale=1">
   </head>
   <body class="page__body">
-    <header class="page-header page-header--form">
-      <div class="page-header__container  page-header__container--form">
-        <a class="page-header__logo" href="index.html">
-          <img class="page-header__logo-image" src="img/logo-image-mobile.svg" width="34" height="38" alt="Графический логотип интернет-магазина «Cat Energy».">
-          <img class="page-header__logo-text" src="img/logo-text-mobile.svg" width="101" height="18" alt="Текстовый логотип интернет-магазина «Cat Energy».">
+    <header class="page-header">
+      <div class="page-header__container page-header__container--form">
+        <a class="page-header__logo page-header__logo--image">
+          <img src="img/logo-image-mobile.svg" width="33" height="38" alt="Графический логотип интернет-магазина «Cat Energy».">
+        </a>
+        <a class="page-header__logo page-header__logo--text">
+          <img src="img/logo-text-mobile.svg" width="101" height="18" alt="Текстовыйлоготип интернет-магазина «Cat Energy».">
+        </a>
+        <a class="page-header__logo page-header__logo--tablet">
+          <img src="img/logo-tablet.svg" width="174" height="52" alt="Логотип интернет-магазина «Cat Energy».">
         </a>
         <nav class="main-nav">
           <div class="main-nav__button-container burger-button">
@@ -22,8 +28,8 @@
             </button>
           </div>
           <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a class="main-nav__link main-nav__link--active" href="#">Главная</a>
+            <li class="main-nav__item main-nav__item--main">
+              <a class="main-nav__link main-nav__link--active " href="#">Главная</a>
             </li>
             <li class="main-nav__item">
               <a class="main-nav__link" href="#">Каталог продукции</a>
