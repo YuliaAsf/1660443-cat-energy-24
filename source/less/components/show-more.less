@@ -2,10 +2,9 @@
   position: relative;
   text-align: center;
 
-
   &::before {
     position: absolute;
-    top: 0;
+    top: 7px;
     left: 50%;
     transform: translateX(-50%);
     width: 30px;
@@ -24,18 +23,69 @@
     background-color: @bg-line;
     content: "";
   }
+
+  @media (min-width: @tablet-width) {
+    background-image: none;
+    background-color: @bg-light;
+
+
+    &::before {
+      top: 127px;
+      width: 60px;
+      height: 60px;
+      background-size: contain;
+    }
+
+    &::after {
+      display: block;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: calc(100% - 75px);
+      background-color: transparent;
+      outline: 2px solid @bg-neutral;
+      content: "";
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 38px;
+
+    &::before {
+      top: 135px;
+    }
+
+    &::after {
+      height: calc(100% - 83px);
+    }
+  }
 }
+
 
 .show-more__title {
   margin: 0;
   margin-bottom: 8px;
-  padding-top: 54px;
+  padding-top: 60px;
   padding-left: 2px;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
   color: #111111;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 176px;
+    padding: 60px 44px;
+    padding-bottom: 16px;
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 67px 17px;
+    padding-bottom: 15px;
+  }
 }
 
 .show-more__description {
@@ -44,11 +94,34 @@
   font-family: @font-arial;
   font-size: 12px;
   line-height: 16px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 30px;
+    font-size: 16px;
+    line-height: 18px;
+    margin-bottom: 85px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    margin-bottom: 86px;
+  }
 }
 
 .show-more__button {
   margin-bottom: 50px;
   width: 100%;
+  font-size: 16px;
+  line-height: 20px;
   text-align: center;
   padding: 10px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 13px;
+    margin-right: 2px;
+  }
 }

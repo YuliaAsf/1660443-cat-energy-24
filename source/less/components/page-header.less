@@ -32,6 +32,14 @@
 .page-header__container--form {
   padding-top: 13px;
   padding-bottom: 14px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 19px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 46px;
+  }
 }
 
 .page-header__logo {
@@ -62,6 +70,7 @@
     display: block;
     width: 200px;
     height: 62px;
+    padding-top: 3px;
   }
 
   @media (min-width: @desktop-width) {

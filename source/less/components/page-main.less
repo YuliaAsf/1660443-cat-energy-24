@@ -25,4 +25,20 @@
     background-color: #d9d9d9;
     content: "";
   }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 33px;
+    margin-bottom: 90px;
+    font-size: 60px;
+    line-height: 60px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 50px;
+    margin-bottom: 81px;
+  }
 }
