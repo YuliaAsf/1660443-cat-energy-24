@@ -4,6 +4,15 @@
 
 .programmes-choice__container {
   .container;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 67px;
+    padding-left: 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 111px;
+  }
 }
 
 .programmes-choice__title {
@@ -14,6 +23,18 @@
   line-height: 36px;
   font-weight: 400;
   color: @dark-font-color;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 20px;
+    margin-bottom: 55px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 32px;
+    margin-bottom: 57px;
+  }
 }
 
 .programmes-choice__description {
@@ -23,4 +44,15 @@
   font-size: 14px;
   color: @dark-font-color;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    width: 52%;
+    margin-bottom: 67px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 30%;
+  }
 }

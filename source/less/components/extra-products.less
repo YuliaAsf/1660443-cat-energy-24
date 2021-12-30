@@ -1,11 +1,23 @@
+.extra-products {
+  @media (min-width: @desktop-width) {
+    flex-grow: 1;
+    margin-right: 79px;
+  }
+}
+
 .extra-products__list {
   .reset-list;
   margin-bottom: 53px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 65px;
+    border: 1px solid #cdcdcd;
+  }
 }
 
 .extra-products__item {
   position: relative;
-  margin-bottom: 27px;
+  margin-bottom: 31px;
 
   &::after {
     position: absolute;
@@ -16,11 +28,31 @@
     background-color: @bg-line;
     content: "";
   }
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0 20px;
+    margin: 0;
+    padding: 25px 37px;
+    padding-bottom: 29px;
+    border-bottom: 1px solid #cdcdcd;
+
+    &::after {
+      display: none;
+    }
+
+    @media (min-width: @desktop-width) {
+      .flex;
+      padding: 0;
+    }
+  }
 }
 
 .extra-products__title {
+  margin: 0;
   position: relative;
-  margin-bottom: 45px;
+  margin-bottom: 48px;
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
@@ -34,27 +66,90 @@
     background-color: @bg-line;
     content: "";
   }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 80px;
+    padding-left: 37px;
+    font-size: 36px;
+    line-height: 36px;
+
+    &::after {
+      display: none;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 5px 0;
+    }
+  }
 }
 
 .extra-products__subtitle {
   margin: 0;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   padding-left: 2px;
   font-size: 16px;
   font-weight: 400;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 25px;
+    grid-area: 1 / 1 / 2 / 2;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 300px;
+    padding: 10px 0;
+    margin: 0;
+  }
 }
 
 .extra-products__list-information {
   .flex;
+  flex-wrap: wrap;
   margin: 0;
   margin-bottom: 15px;
   font-family: @font-arial;
   font-size: 14px;
   line-height: 14px;
+
+  @media (min-width: @tablet-width) {
+    grid-area: 1 / 2 / 2 / 3;
+    margin-bottom: 18px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-grow: 1;
+    margin: 0;
+  }
 }
 
 .extra-products__button {
   width: 100%;
   padding: 10px;
+  font-size: 16px;
+  line-height: 20px;
+  .button-style (@background-color: @bg-accent);
+  color: @light-font-color;
+
+  @media (min-width: @tablet-width) {
+    grid-area: 2 / 1 / 3 / 3;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 224px;
+  }
+}
+
+.extra-products__value {
+  margin-right: 25px;
+}
+
+.extra-products__price {
+  min-width: 70px;
+  margin: 0;
+  text-align: right;
 }

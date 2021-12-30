@@ -15,10 +15,20 @@
   }
 }
 
+.social__container--form {
+  @media (min-width: @tablet-width) {
+    padding: 35px 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 47px 110px;
+  }
+}
+
 .social__link-logo {
   display: block;
-  padding: 34px;
-  padding-bottom: 27px;
+  padding: 35px;
+  padding-bottom: 29px;
   border-bottom: 1px solid #d9d9d9;
 
   @media (min-width: @tablet-width) {
@@ -38,7 +48,7 @@
   flex-wrap: wrap;
   width: 153px;
   .reset-list (@padding: 12px 0; @margin: 0 auto;);
-  padding-bottom: 7px;
+  padding-bottom: 6px;
   padding-right: 2px;
   font-size: 0;
 

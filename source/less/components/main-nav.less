@@ -58,6 +58,10 @@
 
 .main-nav__item--main {
   margin-right: 34px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 33px;
+  }
 }
 
 .main-nav__link {
@@ -92,5 +96,11 @@
     font-size: 20px;
     line-height: 30px;
     color: @light-font-color;
+  }
+}
+
+.main-nav__link--form {
+  @media (min-width: @desktop-width) {
+    color: #111111;
   }
 }
