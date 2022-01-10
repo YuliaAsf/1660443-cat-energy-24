@@ -52,7 +52,7 @@
 
 .main-nav--nojs .main-nav__toggle {
   display: none;
-  }
+}
 
 
 .main-nav--nojs .main-nav__list {
@@ -64,7 +64,6 @@
 }
 
 .main-nav__list {
-
   @media (min-width: @tablet-width) {
     position: static;
     .flex;
@@ -129,12 +128,12 @@
     font-weight: 400;
     line-height: 24px;
     padding: 23px 0;
-}
+  }
 
   @media (min-width: @desktop-width) {
     font-size: 20px;
     line-height: 30px;
-    color:@dark-font-color;
+    color: @dark-font-color;
   }
 }
 
@@ -151,26 +150,22 @@
 }
 
 .main-nav__link--active {
-
   @media (min-width: @tablet-width) {
-
-  &::before {
-    position: absolute;
-    bottom: 12px;
-    right: 0;
-    left: 0;
-    height: 2px;
-    background-color: @bg-accent;
-    content: "";
+    &::before {
+      position: absolute;
+      bottom: 12px;
+      right: 0;
+      left: 0;
+      height: 2px;
+      background-color: @bg-accent;
+      content: "";
+    }
   }
-}
 
   @media (min-width: @desktop-width) {
-
     &::before {
       background-color: @bg-light;
       bottom: 14px;
     }
   }
 }
-
