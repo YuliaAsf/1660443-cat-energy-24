@@ -7,11 +7,11 @@
 
   @media (min-width: @tablet-width) {
     .flex;
-    padding: 32px 30px;
+    padding: 37px 30px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 42px 110px;
+    padding: 35px 110px;
   }
 }
 
@@ -30,6 +30,14 @@
   padding: 35px;
   padding-bottom: 29px;
   border-bottom: 1px solid #d9d9d9;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 
   @media (min-width: @tablet-width) {
     padding: 0;
@@ -81,6 +89,19 @@
   padding: 10px;
 }
 
+.social__icon {
+ color: #666666;
+
+  &:hover {
+    color: @bg-accent;
+  }
+
+  &:active {
+    stroke: @bg-accent;
+    opacity: 0.3;
+  }
+}
+
 .social__icon--vk {
   @media (min-width: @tablet-width) {
     min-width: 29px;
@@ -101,3 +122,4 @@
     height: 28px;
   }
 }
+

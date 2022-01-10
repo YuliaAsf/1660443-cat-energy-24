@@ -12,7 +12,6 @@
 
   @media (min-width: @desktop-width) {
     .flex;
-    flex-wrap: wrap;
   }
 }
 
@@ -20,6 +19,8 @@
   position: relative;
   margin-bottom: 20px;
   background-color: @bg-neutral;
+  padding: 30px 20px;
+  padding-bottom: 0;
 
   &::before {
     position: absolute;
@@ -93,7 +94,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: calc(47% - 3px);
+    width: calc(43% + 5px);
     margin-bottom: 27px;
     padding-bottom: 59px;
 
@@ -125,7 +126,8 @@
 .programmes__title {
   position: relative;
   margin: 0;
-  padding: 30px 30px 29px 91px;
+  margin-bottom: 29px;
+  padding-left: 71px;
   font-size: 24px;
   line-height: 37px;
   font-weight: 400;
@@ -133,51 +135,40 @@
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
-    padding: 78px 52px 24px 52px;
+    padding: 48px 32px;
+    padding-bottom: 0;
+    margin-bottom: 25px;
     font-size: 36px;
     line-height: 36px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 214px;
-    margin-bottom: 50px;
+    padding-left: 194px;
+    margin-bottom: 73px;
   }
 }
 
 .programmes__description {
   position: relative;
   margin: 0;
-  padding: 0 20px;
   padding-bottom: 23px;
   font-family: @font-arial;
   font-size: 14px;
   line-height: 18px;
+  border-bottom: 1px solid #d9d9d9;
 
-
-  &::after {
-    position: absolute;
-    bottom: 0;
-    left: 20px;
-    right: 20px;
-    height: 1px;
-    background-color: #d9d9d9;
-    content: "";
-  }
 
   @media (min-width: @tablet-width) {
-    padding: 0 52px;
-    padding-right: 44.5%;//calc
-    margin-bottom: 51px;
+    padding: 0 32px;
+    padding-right: 44%;
+    margin-bottom: 50px;
     font-size: 16px;
     line-height: 24px;
-
-    &::after {
-      display: none;
-    }
+    border: none;
   }
 
   @media (min-width: @desktop-width) {
-    padding-right: 40px;
+    padding-right: 30px;
     margin-bottom: 25px;
   }
 }
@@ -186,18 +177,27 @@
   .link-style (@color: @dark-font-color;);
   display: block;
   box-sizing: border-box;
-  width: 144px;
-  padding: 18px 19px;
-  padding-bottom: 23px;
+  width: 134px;
+  padding: 18px 37px 23px 0;
   font-size: 16px;
   line-height: 16px;
   background-image: url("../img/programmes-arrow.svg");
-  .background-image-style(@background-position: top 47% right);
+  .background-image-style(@background-position: top 45% left 99px);
   text-transform: uppercase;
 
+  &:hover {
+    background-image: url("../img/arrow-long.svg");
+  }
+
+  &:active {
+    background-image: url("../img/arrow-long.svg");
+    opacity: 0.3;
+  }
+
   @media (min-width: @tablet-width) {
-    padding: 0 52px;
-    width: 218px;
+    padding: 0 32px;
+    padding-right: 58px;
+    width: 198px;
     font-size: 20px;
     line-height: 30px;
     .background-image-style(@background-position: center right 8px);

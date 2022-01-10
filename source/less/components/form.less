@@ -104,24 +104,50 @@
 
 .form__group-title {
   position: relative;
-  z-index: 1;
   padding: 0;
-  padding-right: 42px;
   margin-bottom: 34px;
   font-size: 24px;
   line-height: 26px;
   color: @dark-font-color;
+  background-color: @bg-light;
+  box-shadow: 0 0 0 22px @bg-light;
+
+  &::before {
+    position: absolute;
+    top: 17px;
+    left: -20px;
+    width: 100vw;
+    z-index: -1;
+    height: 2px;
+    background-color: @bg-accent;
+    content: "";
+  }
 
   @media (min-width: @tablet-width) {
     padding-top: 26px;
     margin-bottom: 75px;
     font-size: 36px;
     line-height: 36px;
+    box-shadow: 0 0 0 40px @bg-light;
+
+    br {
+      display: none;
+    }
+
+    &::before {
+      top: 52px;
+      left: -70px;
+    }
   }
 
   @media (min-width: @desktop-width) {
     padding-top: 23px;
     margin-bottom: 76px;
+  }
+
+  &::before {
+    top: 50px;
+    left: -110px;
   }
 }
 
@@ -390,6 +416,10 @@
 .form__button-block {
   @media (min-width: @tablet-width) {
     .flex;
+    margin-bottom: 51px;
+  }
+
+  @media (min-width: @desktop-width) {
     margin-bottom: 48px;
   }
 }
