@@ -4,6 +4,19 @@
   padding: 21px 0;
   padding-bottom: 25px;
 
+  &:hover .copyright__logo {
+    color: @bg-accent;
+  }
+
+  &:active .copyright__logo {
+    color: @bg-accent;
+    opacity: 0.3;
+  }
+
+  &:active .copyright__details {
+    opacity: 0.3;
+  }
+
   @media (min-width: @tablet-width) {
     width: 164px;
   }
@@ -18,4 +31,8 @@
   font-size: 16px;
   line-height: 18px;
   word-spacing: -2px;
+}
+
+.copyright__logo {
+  color: #666666;
 }

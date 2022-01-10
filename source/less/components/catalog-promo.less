@@ -36,7 +36,7 @@
     flex-direction: row;
     min-height: 200px;
     padding: 0 79px;
-    margin-bottom: 74px;
+    margin-bottom: 76px;
 
     &::before {
       background-image: url("../img/сat-in-backpack_tablet.png");
@@ -45,6 +45,10 @@
 
   @media (min-width: @desktop-width) {
     width: 245px;
+    padding: 57px 30px;
+    padding-bottom: 44px;
+    margin-bottom: 0;
+    margin-top: 58px;
   }
 }
 
@@ -58,7 +62,7 @@
   color: @light-font-color;
   text-align: center;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet-width) and (max-width: 1439px) {
     width: 161px;
     padding-right: 45px;
     margin: 0;
