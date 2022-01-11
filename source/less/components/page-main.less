@@ -16,9 +16,9 @@
   font-weight: 400;
   color: @dark-font-color;
 
+  &::before,
   &::after {
     position: absolute;
-    bottom: -41px;
     left: -20px;
     right: -20px;
     height: 1px;
@@ -26,12 +26,21 @@
     content: "";
   }
 
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: -41px;
+  }
+
   @media (min-width: @tablet-width) {
-    padding-top: 21px;
+    padding-top: 36px;
     margin-bottom: 90px;
     font-size: 60px;
     line-height: 60px;
 
+    &::before,
     &::after {
       display: none;
     }
