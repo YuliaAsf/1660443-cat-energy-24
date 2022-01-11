@@ -164,8 +164,21 @@
 
   @media (min-width: @desktop-width) {
     &::before {
-      background-color: @bg-light;
       bottom: 14px;
+    }
+  }
+}
+
+.main-nav__link--active-light {
+  @media (min-width: @desktop-width) {
+    &::before {
+      position: absolute;
+      bottom: 12px;
+      right: 0;
+      left: 0;
+      height: 2px;
+      background-color: @bg-light;
+      content: "";
     }
   }
 }

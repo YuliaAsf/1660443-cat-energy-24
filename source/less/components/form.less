@@ -72,7 +72,7 @@
 
   @media (min-width: @desktop-width) {
     width: 100%;
-    margin-bottom: 44px;
+    margin-bottom: 26px;
   }
 }
 
@@ -104,6 +104,7 @@
 
 .form__group-title {
   position: relative;
+  display: inline-block;
   padding: 0;
   margin-bottom: 34px;
   font-size: 24px;
@@ -135,7 +136,7 @@
     }
 
     &::before {
-      top: 52px;
+      top: 48px;
       left: -70px;
     }
   }
@@ -145,7 +146,7 @@
     margin-bottom: 76px;
 
     &::before {
-      top: 50px;
+      top: 45px;
       left: -110px;
     }
   }
@@ -173,8 +174,18 @@
 }
 
 .form__block--email {
+  position: relative;
+
   @media (min-width: @tablet-width) {
-    margin-bottom: 20px;
+    margin-bottom: 19px;
+  }
+}
+
+.form__block--phone {
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
   }
 }
 
@@ -246,7 +257,15 @@
   padding: 14px;
   padding-right: 40px;
   border: none;
-  outline: 1px solid #cdcdcd;
+  outline: 1px solid #e7e7e7;
+
+  &:hover {
+    outline: 1px solid #cdcdcd;
+  }
+
+  &:focus {
+    outline: 2px solid #444444;
+  }
 
   @media (min-width: @tablet-width) {
     padding: 16px 40px 16px 18px;
@@ -254,27 +273,26 @@
 }
 
 .form__field--email {
-  background-image: url("../img/email-icon.svg");
-  .background-image-style(@background-position: center right 15px);
+  &:focus + .form__icon--email {
+    color: @bg-accent;
+  }
 
   @media (min-width: @tablet-width) {
     padding: 18px 40px 18px 20px;
-    .background-image-style(@background-position: center right 16px);
   }
 
   @media (min-width: @desktop-width) {
     padding: 17px 40px 18px 19px;
-    .background-image-style(@background-position: center right 18px);
   }
 }
 
 .form__field--phone {
-  background-image: url("../img/phone-icon.svg");
-  .background-image-style(@background-position: center right 13px;);
+  &:focus + .form__icon--phone {
+    color: @bg-accent;
+  }
 
   @media (min-width: @tablet-width) {
     padding: 18px 40px 18px 19px;
-    .background-image-style(@background-position: center right 16px);
   }
 
   @media (min-width: @desktop-width) {
@@ -282,21 +300,20 @@
   }
 }
 
-
 .form__field--textarea {
   box-sizing: border-box;
   width: 100%;
   min-height: 150px;
   margin: 0;
-  margin-top: 37px;
+  margin-top: 4px;
   padding: 6px 11px;
   padding-left: 15px;
   resize: none;
 
   @media (min-width: @tablet-width) {
-    margin-top: 77px;
     min-height: 170px;
     padding: 8px 19px;
+    margin-top: 2px;
   }
 
   @media (min-width: @desktop-width) {
@@ -314,6 +331,21 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
   }
+}
+
+
+.form__icon {
+  position: absolute;
+  right: 18px;
+}
+
+.form__icon--email {
+  color: #222222;
+}
+
+.form__icon--phone {
+  color: #000000;
+  right: 16px;
 }
 
 .form__list {
@@ -348,6 +380,10 @@
 
 .form__control {
   .flex (@justify-content: flex-start;);
+
+  &:hover .form__control-mark {
+    border: 1px solid #bababa;
+  }
 }
 
 .form__control-mark {
@@ -413,6 +449,13 @@
   }
 }
 
+.form__control-input[type="radio"]:disabled + .form__control-mark,
+.form__control-input[type="radio"]:disabled ~ .form__control-label,
+.form__control-input[type="checkbox"]:disabled + .form__control-mark,
+.form__control-input[type="checkbox"]:disabled ~ .form__control-label {
+  opacity: 0.3;
+}
+
 .form__button-block {
   @media (min-width: @tablet-width) {
     .flex;
@@ -425,9 +468,9 @@
 }
 
 .form__button {
-  margin-bottom: 22px;
   width: 100%;
   padding: 10px;
+  margin-bottom: 21px;
   font-size: 16px;
   line-height: 20px;
   color: @light-font-color;
@@ -441,6 +484,7 @@
 
   @media (min-width: @desktop-width) {
     width: 568px;
+    margin-bottom: 33px;
   }
 }
 
@@ -462,5 +506,15 @@
   @media (min-width: @desktop-width) {
     padding-right: 310px;
     padding-top: 7px;
+    margin-bottom: 40px;
   }
+}
+
+.invalid:required {
+  border: 2px solid #ff8282;//класс для обозначения ошибки при заполнении обязательных полей
+}
+
+.form__field--email.invalid + .form__icon--email,
+.form__field--phone.invalid + .form__icon--phone {
+  color: #ff8282;
 }
