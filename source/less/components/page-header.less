@@ -52,44 +52,25 @@
   }
 }
 
-.page-header__logo--image {
-  width: 40px;
-
+.page-header__logo-picture {
   @media (min-width: @tablet-width) {
-    display: none;
+    width: 175px;
+    height: 51px;
+    margin-top: -7px;
   }
-}
-
-.page-header__logo--text {
-  width: 116px;
-  padding-top: 4px;
-
-  @media (min-width: @tablet-width) {
-    display: none;
-  }
-}
-
-.page-header__logo--tablet {
-  display: none;
-
-  @media (min-width: @tablet-width) {
-    display: block;
-    width: 200px;
-    height: 62px;
-    padding-top: 3px;
-  }
-
-  @media (min-width: @desktop-width) {
-    display: none;
-  }
-}
-
-.page-header__logo--desktop {
-  display: none;
 
   @media (min-width: @desktop-width) {
     display: block;
     width: 202px;
     height: 59px;
+  }
+}
+
+.page-header__logo-text {
+  padding-top: 4px;
+  padding-right: 10px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
   }
 }
