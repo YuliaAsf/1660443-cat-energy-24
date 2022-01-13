@@ -14,12 +14,16 @@
   .container;
   padding-bottom: 45px;
 
+  @media (min-width: @tablet-width) {
+    padding-bottom: 75px;
+  }
+
   @media (min-width: @desktop-width) {
     .flex (@align-items: stretch;);
   }
 }
 
-.demo__flex-container {
+.demo__flex-wrapper {
   @media (min-width: @desktop-width) {
     width: 51%;
   }
@@ -196,7 +200,10 @@
 
 .demo__slider {
   @media (min-width: @tablet-width) {
+    max-width: 605px;
+    height: 521px;
     padding-bottom: 46px;
+    margin: 0 auto;
   }
 
   @media (min-width: @desktop-width) {
@@ -208,23 +215,23 @@
   display: flex;
   width: 280px;
   margin: 0 auto;
-  margin-bottom: 31px;
+  margin-bottom: 20px;
   overflow: hidden;
 
   @media (min-width: @tablet-width) {
-    width: 591px;
-    height: 511px;
-    margin-bottom: 25px;
+    width: auto;
+    height: 100%;
+    margin-bottom: 15px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-bottom: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 32px;
   }
 }
 
 .demo__image-box {
-  min-width: 280px;
+  position: relative;
+  width: 280px;
 
   @media (min-width: @tablet-width) {
     overflow: hidden;
@@ -240,37 +247,46 @@
 
   @media (min-width: @desktop-width) {
     padding-top: 25px;
+
+    &--fat {
+      width: 51%;
+    }
+
+    &--slim {
+      width: 49%;
+    }
   }
 }
 
 .demo__image {
+  display: block;
   width: 280px;
-  height: 221px;
+  height: auto;
 
   @media (min-width: @tablet-width) {
-    width: 677px;
-    height: 517px;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 592px;
+    position: absolute;
     height: 511px;
   }
 }
 
 .demo__image--fat {
-  transform: scale(1.1);
-
   @media (min-width: @tablet-width) {
-    transform: scale(2.2) translateX(27%);
+    min-width: 650px;
+    top: 5px;
+    left: 9px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 20px;
+    left: 8px;
   }
 }
 
-
 .demo__image--slim {
   @media (min-width: @tablet-width) {
-    height: 530px;
-    transform: scale(1.93) translateX(-21%);
+    min-width: 545px;
+    top: 28px;
+    right: -6px;
   }
 }
 
@@ -340,7 +356,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 0;
+  right: 2px;
   width: 35px;
   height: 6px;
   margin: 0;
