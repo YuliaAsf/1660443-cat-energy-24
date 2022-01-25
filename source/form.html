@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
     <meta name="viewport" content="width=device-width initial-scale=1">
-    <link href="css/style.css" rel="stylesheet">
-    <link rel="icon" href="/favicon.ico">
+    <link href="css/style.min.css" rel="stylesheet">
+    <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple.png">
-    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -30,13 +30,13 @@
           </button>
           <ul class="main-nav__list">
             <li class="main-nav__item">
-              <a class="main-nav__link" href="#">Главная</a>
+              <a class="main-nav__link" href="index.html">Главная</a>
             </li>
             <li class="main-nav__item">
               <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link main-nav__link--active" href="form.html">Подбор программы</a>
+              <a class="main-nav__link main-nav__link--active" href="#">Подбор программы</a>
             </li>
           </ul>
         </nav>
@@ -92,22 +92,22 @@
               </fieldset>
             </div>
             <fieldset class="form__group  form__group--contacts">
-              <legend class="form__group-title">Контактные данные<br> (владельца кота)</legend>
+              <legend class="form__group-title">Контактные данные&nbsp;<br>(владельца кота)</legend>
               <div class="form__group-wrapper">
                 <div class="form__block form__block--email">
                   <label class="form__control-label  form__control-label--email" for="email">
                     E&#8209;mail:*</label>
                   <input class="form__field form__field--email" type="email" name="email" id="email" placeholder="kuklachev@gmail.com" required>
-                  <svg class="form__icon form__icon--email" aria-hidden="true" focusable="false" width="19" height="14" fill="none">
-                    <use xlink:href="img/sprite.svg#icon-email"></use>
+                  <svg class="form__icon form__icon--email" width="19" height="14" viewBox="0 0 19 14" aria-hidden="true" focusable="false" fill="none">
+                    <use xlink:href="img/sprite.svg#email-icon"></use>
                   </svg>
                 </div>
                 <div class="form__block form__block--phone">
-                  <label class="form__control-label  form__control-label--phone" for="phone">
+                  <label class="form__control-label form__control-label--phone" for="phone">
                     Телефон:*</label>
                   <input class="form__field form__field--phone" type="tel" name="phone" id="phone" placeholder="8 (960) 900-60-90" required>
-                  <svg class="form__icon form__icon--phone" aria-hidden="true" focusable="false" width="20" height="21" fill="none">
-                    <use xlink:href="img/sprite.svg#icon-phone"></use>
+                  <svg class="form__icon form__icon--phone" width="20" height="21" viewBox="0 0 20 21">
+                    <use xlink:href="img/sprite.svg#phone-icon"></use>
                   </svg>
                 </div>
               </div>
@@ -181,22 +181,22 @@
           <ul class="social__list">
             <li class="social__item">
               <a class="social__link" href="#">ВКонтакте
-                <svg class="social__icon social__icon--vk" role="img" aria-hidden="true" focusable="false" width="23" height="13" fill="none">
-                  <use xlink:href="img/sprite.svg#icon-vk"></use>
+                <svg class="social__icon social__icon--vk" width="23" height="13" viewBox="0 0 23 13" role="img" aria-hidden="true" focusable="false" fill="none">
+                  <use xlink:href="img/sprite.svg#vk-icon"></use>
                 </svg>
               </a>
             </li>
-            <li class="social__item social__item--instagram ">
+            <li class="social__item social__item--instagram">
               <a class="social__link" href="#">Instagram
-                <svg class="social__icon social__icon--instagram" role="img" aria-hidden="true" focusable="false" width="16" height="16"  fill="none">
-                  <use xlink:href="img/sprite.svg#icon-instagram"></use>
+                <svg class="social__icon social__icon--instagram" width="16" height="16" viewBox="0 0 16 16" role="img" aria-hidden="true" focusable="false" fill="none">
+                  <use xlink:href="img/sprite.svg#instagram-icon"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link" href="#">Facebook
-                <svg class="social__icon social__icon--fb" role="img" aria-hidden="true" focusable="false" width="13" height="20" fill="none">
-                  <use xlink:href="img/sprite.svg#icon-fb"></use>
+                <svg class="social__icon social__icon--fb"  width="13" height="20" viewBox="0 0 13 20" role="img" aria-hidden="true" focusable="false" fill="none">
+                  <use xlink:href="img/sprite.svg#facebook-icon"></use>
                 </svg>
               </a>
             </li>
@@ -204,8 +204,8 @@
           <div class="page-footer__copyright copyright">
             <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
               <span class="copyright__details">HTML Academy</span>
-              <svg class="copyright__logo" role="img" aria-hidden="true" focusable="false"  width="27" height="34" fill="none">
-                <use xlink:href="img/sprite.svg#academy-logo"></use>
+              <svg class="copyright__logo" width="27" height="34" viewBox="0 0 27 34" role="img" aria-label="Сайт HTML Academy" focusable="false" fill="none">
+                <use xlink:href="img/sprite.svg#htmlacademy-logo"></use>
               </svg>
             </a>
           </div>

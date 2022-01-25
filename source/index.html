@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
     <meta name="viewport" content="width=device-width initial-scale=1">
-    <link href="css/style.css" rel="stylesheet">
-    <link rel="icon" href="/favicon.ico">
+    <link href="css/style.min.css" rel="stylesheet">
+    <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple.png">
-    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -117,14 +117,18 @@
             <div class="demo__slider-container">
               <div class="demo__image-box demo__image-box--fat" style="width: 50%">
                 <picture>
-                    <source media="(min-width: 768px)" srcset="img/cat-before_tablet.png 1x, img/cat-before_tablet@2x.png 2x">
-                    <img class="demo__image demo__image--fat" src="img/cat-after_mobile.png" srcset="img/cat-before_mobile@2x.png" width="280" height="232" alt="Кот до перехода на питание CatEnergy.">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/cat-before_tablet.webp 1x, img/cat-before_tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/cat-before_mobile.webp 1x, img/cat-before_mobile@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/cat-before_tablet.png 1x, img/cat-before_tablet@2x.png 2x">
+                  <img class="demo__image demo__image--fat" src="img/cat-before_mobile.png" srcset="img/cat-before_mobile@2x.png 2x" width="280" height="232" alt="Кот до перехода на питание CatEnergy.">
                 </picture>
               </div>
               <div class="demo__image-box demo__image-box--slim" style="width: 50%">
                 <picture>
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/cat-aftertablet.webp 1x, img/cat-after_tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/cat-after_mobile.webp 1x, img/cat-after_mobile@2x.webp 2x">
                   <source media="(min-width: 768px)" srcset="img/cat-after_tablet.png 1x, img/cat-after_tablet@2x.png 2x">
-                  <img class="demo__image demo__image--slim" src="img/cat-after_mobile.png" srcset="img/cat-after_mobile@2x.png" width="280" height="232" alt="Кот после перехода на питание CatEnergy.">
+                  <img class="demo__image demo__image--slim" src="img/cat-after_mobile.png" srcset="img/cat-after_mobile@2x.png 2x" width="280" height="232" alt="Кот после перехода на питание CatEnergy.">
                 </picture>
               </div>
             </div>
@@ -166,22 +170,22 @@
           <ul class="social__list">
             <li class="social__item">
               <a class="social__link" href="#">ВКонтакте
-                <svg class="social__icon social__icon--vk" role="img" aria-hidden="true" focusable="false" width="23" height="13" fill="none">
-                  <use xlink:href="img/sprite.svg#icon-vk"></use>
+                <svg class="social__icon social__icon--vk" width="23" height="13" viewBox="0 0 23 13" role="img" aria-hidden="true" focusable="false" fill="none">
+                  <use xlink:href="img/sprite.svg#vk-icon"></use>
                 </svg>
               </a>
             </li>
-            <li class="social__item social__item--instagram ">
+            <li class="social__item social__item--instagram">
               <a class="social__link" href="#">Instagram
-                <svg class="social__icon social__icon--instagram" role="img" aria-hidden="true" focusable="false" width="16" height="16"  fill="none">
-                  <use xlink:href="img/sprite.svg#icon-instagram"></use>
+                <svg class="social__icon social__icon--instagram" width="16" height="16" viewBox="0 0 16 16" role="img" aria-hidden="true" focusable="false" fill="none">
+                  <use xlink:href="img/sprite.svg#instagram-icon"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link" href="#">Facebook
-                <svg class="social__icon social__icon--fb" role="img" aria-hidden="true" focusable="false" width="13" height="20" fill="none">
-                  <use xlink:href="img/sprite.svg#icon-fb"></use>
+                <svg class="social__icon social__icon--fb"  width="13" height="20" viewBox="0 0 13 20" role="img" aria-hidden="true" focusable="false" fill="none">
+                  <use xlink:href="img/sprite.svg#facebook-icon"></use>
                 </svg>
               </a>
             </li>
@@ -189,8 +193,8 @@
           <div class="page-footer__copyright copyright">
             <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
               <span class="copyright__details">HTML Academy</span>
-              <svg class="copyright__logo" role="img" aria-label="Сайт HTML Academy" focusable="false"  width="27" height="34" fill="none">
-                <use xlink:href="img/sprite.svg#academy-logo"></use>
+              <svg class="copyright__logo" width="27" height="34" viewBox="0 0 27 34" role="img" aria-label="Сайт HTML Academy" focusable="false" fill="none">
+                <use xlink:href="img/sprite.svg#htmlacademy-logo"></use>
               </svg>
             </a>
           </div>
