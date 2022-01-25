@@ -283,12 +283,14 @@
 }
 
 .demo__image--slim {
-  display: none;
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
 
   @media (min-width: @tablet-width) {
     min-width: 545px;
-    top: 28px;
-    right: -6px;
+    top: 12px;
+    right: 0;
   }
 }
 
