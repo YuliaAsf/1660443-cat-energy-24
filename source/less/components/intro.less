@@ -24,7 +24,7 @@
     height: 63%;
     .background-image-style;
     background-image: url("../img/cat-background_mobile.jpg");
-    background-size: cover;
+    background-size: 100% auto;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     content: "";
   }
@@ -32,7 +32,6 @@
   @media (min-resolution: 2dppx) {
     &::after {
       background-image: url("../img/cat-background_mobile@2x.jpg");
-      background-size: 320px auto;
     }
   }
 
@@ -86,7 +85,8 @@
   margin-bottom: 20px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 527px;
+    //margin-bottom: 527px;
+    padding-bottom: 487px;
   }
 
   @media (min-width: @desktop-width) {
@@ -166,7 +166,7 @@
 
   @media (min-width: @tablet-width) {
     position: absolute;
-    top: 235px;
+    bottom: -25px;
     left: calc(4% - 2px);
     z-index: -1;
     width: 709px;
