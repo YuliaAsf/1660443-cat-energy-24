@@ -24,12 +24,12 @@
     height: 63%;
     .background-image-style;
     background-image: url("../img/cat-background_mobile.jpg");
+    background-color: @bg-accent-transparent;
     background-size: 100% auto;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     content: "";
   }
 
-  @media (min-resolution: 2dppx) {
+  @media (min-resolution: 1.5dppx) {
     &::after {
       background-image: url("../img/cat-background_mobile@2x.jpg");
     }
@@ -72,7 +72,6 @@
     @media (min-resolution: 2dppx) {
       &::after {
         background-image: url("../img/cat-background_desktop@2x.jpg");
-        background-size: 720px auto;
       }
     }
   }
@@ -85,15 +84,13 @@
   margin-bottom: 20px;
 
   @media (min-width: @tablet-width) {
-    //margin-bottom: 527px;
     padding-bottom: 487px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 267px;
+    padding-bottom: 246px;
   }
 }
-
 
 .intro__title {
   margin: 0;
@@ -133,7 +130,7 @@
 
   @media (min-width: @desktop-width) {
     padding-left: 80px;
-    margin-bottom: 52px;
+    margin-bottom: 50px;
   }
 }
 
