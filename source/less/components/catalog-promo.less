@@ -18,11 +18,11 @@
     height: 100%;
     background-image: url("../img/cat-backpack_mobile.png");
     .background-image-style;
-    background-size: cover;
+    background-size: contain;
     content: "";
   }
 
-  @media (min-resolution: 2dppx) {
+  @media (min-resolution: 1.5dppx) {
     &::before {
       background-image: url("../img/cat-backpack_mobile@2x.png");
       background-size: 280px auto;
@@ -43,10 +43,11 @@
     flex-direction: row;
     min-height: 200px;
     padding: 0 79px;
-    margin-bottom: 76px;
+    margin-bottom: 75px;
 
     &::before {
       background-image: url("../img/cat-backpack_tablet.png");
+      background-size: cover;
     }
 
     @media (min-resolution: 2dppx) {

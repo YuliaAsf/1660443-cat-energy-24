@@ -24,7 +24,7 @@
 
 .form__group--radio {
   position: relative;
-  margin-bottom: 48px;
+  margin-bottom: 46px;
 
   &::before {
     position: absolute;
@@ -111,7 +111,7 @@
   line-height: 26px;
   color: @dark-font-color;
   background-color: @bg-light;
-  box-shadow: 0 0 0 22px @bg-light;
+  box-shadow: 0 0 0 21px @bg-light;
 
   &::before {
     position: absolute;
@@ -129,7 +129,7 @@
     margin-bottom: 75px;
     font-size: 36px;
     line-height: 36px;
-    box-shadow: 0 0 0 40px @bg-light;
+    box-shadow: 0 0 0 39px @bg-light;
 
     br {
       display: none;
@@ -153,6 +153,8 @@
 }
 
 .form__group-title--checkbox {
+  margin-bottom: 33px;
+
   @media (min-width: @tablet-width) {
     margin-bottom: 59px;
   }
@@ -340,7 +342,7 @@
 }
 
 .form__icon--phone {
-  right: 16px;
+  right: 14px;
 }
 
 .form__list {
@@ -348,6 +350,8 @@
 }
 
 .form__list--checkbox {
+  margin-bottom: 12px;
+
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -367,10 +371,6 @@
   @media (min-width: @tablet-width) {
     margin-bottom: 14px;
   }
-}
-
-.form__item--checkbox {
-  margin-bottom: 12px;
 }
 
 .form__control {
@@ -444,6 +444,7 @@
   }
 }
 
+/*стили для состояния disabled*/
 .form__control-input[type="radio"]:disabled + .form__control-mark,
 .form__control-input[type="radio"]:disabled ~ .form__control-label,
 .form__control-input[type="checkbox"]:disabled + .form__control-mark,
@@ -468,7 +469,10 @@
   margin-bottom: 21px;
   font-size: 16px;
   line-height: 20px;
+  .button-style;
+  background-color: @bg-accent;
   color: @light-font-color;
+
 
   @media (min-width: @tablet-width) {
     width: 282px;
@@ -503,10 +507,6 @@
     padding-top: 7px;
     margin-bottom: 40px;
   }
-}
-
-.invalid:required {
-  border: 2px solid #ff8282;//класс для обозначения ошибки при заполнении обязательных полей
 }
 
 .form__field--email.invalid + .form__icon--email,
